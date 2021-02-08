@@ -2,11 +2,11 @@ var fs = require("fs");
 var dir = require("node-dir");
 var path = require("path");
 var ResolverIntercept = require("./resolverintercept");
-var Require = require("truffle-require");
+var Require = require("moxie-require");
 var async = require("async");
-var Web3 = require("web3");
-var expect = require("truffle-expect");
-var Deployer = require("truffle-deployer");
+var Web3 = require("@vapory/web3");
+var expect = require("moxie-expect");
+var Deployer = require("moxie-deployer");
 
 function Migration(file) {
   this.file = path.resolve(file);
@@ -67,7 +67,7 @@ Migration.prototype.run = function(options, callback) {
     });
   };
 
-  web3.eth.getAccounts(function(err, accounts) {
+  web3.vap.getAccounts(function(err, accounts) {
     if (err) return callback(err);
 
     Require.file({
@@ -208,7 +208,7 @@ var Migrate = {
       send: function(payload) {
         var result = provider.send(payload);
 
-        if (payload.method == "eth_sendTransaction") {
+        if (payload.method == "vap_sendTransaction") {
           printTransaction(result.result);
         }
 
@@ -218,7 +218,7 @@ var Migrate = {
         provider.sendAsync(payload, function(err, result) {
           if (err) return callback(err);
 
-          if (payload.method == "eth_sendTransaction") {
+          if (payload.method == "vap_sendTransaction") {
             printTransaction(result.result);
           }
 

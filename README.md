@@ -1,2 +1,2 @@
-# truffle-migrate
+# moxie-migrate
 On-chain migrations management

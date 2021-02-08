@@ -1,5 +1,6 @@
 {
-  "name": "truffle-migrate",
+  "name": "moxie-migrate",
+  "namespace": "moxiesuite",
   "version": "2.0.6",
   "description": "On-chain migrations management",
   "main": "index.js",
@@ -8,27 +9,27 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trufflesuite/truffle-migrate.git"
+    "url": "git+https://github.com/moxiesuite/moxie-migrate.git"
   },
   "keywords": [
-    "ethereum",
-    "truffle",
+    "vapory",
+    "moxie",
     "migrations",
     "deployment"
   ],
   "author": "Tim Coulter <tim.coulter@consensys.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trufflesuite/truffle-migrate/issues"
+    "url": "https://github.com/moxiesuite/moxie-migrate/issues"
   },
-  "homepage": "https://github.com/trufflesuite/truffle-migrate#readme",
+  "homepage": "https://github.com/moxiesuite/moxie-migrate#readme",
   "dependencies": {
     "async": "^2.1.4",
     "node-dir": "^0.1.16",
-    "truffle-deployer": "^2.0.5",
-    "truffle-expect": "^0.0.3",
-    "truffle-require": "^1.0.5",
-    "web3": "^0.20.1"
+    "moxie-deployer": "^2.0.5",
+    "moxie-expect": "^0.0.3",
+    "moxie-require": "^1.0.5",
+    "@vapory/web3": "0.20.4-b"
   },
   "devDependencies": {
     "mocha": "^3.2.0"
